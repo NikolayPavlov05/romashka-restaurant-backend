@@ -26,19 +26,5 @@ services:
     depends_on:
       - db
 
-  nginx:
-    container_name: romashka-nginx
-    image: nginx:latest
-    build:
-      dockerfile: Dockerfile.prod
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./src/static:/code/static
-      - ./src/media:/code/media
-    ports:
-      - "80:80"
-    depends_on:
-      - web
-
 volumes:
   postgres_data:
