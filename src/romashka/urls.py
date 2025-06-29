@@ -12,8 +12,8 @@ from django.conf import settings
 
 
 openapi_schema_urls = [
-    path(r"", include("catalog.api.urls")),
-    path(r"", include("order.api.urls")),
+    path(r"api/", include("catalog.api.urls")),
+    path(r"api/", include("order.api.urls")),
 ]
 
 schema_urlpatterns = [
@@ -27,9 +27,9 @@ schema_urlpatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("schema/", (schema_urlpatterns, "api-v1-schema", "api-v1-schema")),
+    path("api/schema/", (schema_urlpatterns, "api-v1-schema", "api-v1-schema")),
     path(
-        "schema/docs/",
+        "api/schema/docs/",
         swagger_view,
         {"schema_url": "api-v1-schema:openapi-schema-yaml"},
         name="swagger-ui",
