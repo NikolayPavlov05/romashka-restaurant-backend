@@ -122,3 +122,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 PROJECT_URL = "http://192.168.1.115:8000"
+
+import local_settings

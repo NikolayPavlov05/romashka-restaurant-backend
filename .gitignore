@@ -2,3 +2,4 @@
 .idea
 nginx/nginx.conf
 src/media
+src/romashka/local_settings.py
