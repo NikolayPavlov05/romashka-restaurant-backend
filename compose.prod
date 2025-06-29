@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source ".env"
+
+ARGS_STRING=""
+while [ $1 ]
+    do
+        ARGS_STRING+="$1 "
+        shift
+    done
+
+docker compose -f docker-compose.prod.yml ${ARGS_STRING}
