@@ -1,3 +1,4 @@
 .env
 .idea
 nginx/nginx.conf
+src/media
