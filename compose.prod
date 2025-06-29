@@ -9,4 +9,4 @@ while [ $1 ]
         shift
     done
 
-docker compose -f ./docker-compose.prod.yml ${ARGS_STRING}
+docker compose -f ./docker-compose.prod.yaml ${ARGS_STRING}
